@@ -1,0 +1,41 @@
+﻿@model IEnumerable<HoaDon>
+
+<div class="container">
+    <div class="boxed">
+        <div class="boxed-child">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên khách hàng</th>
+                        <th>SDT</th>
+                        <th>Địa chỉ</th>
+                        <th>Trạng thái đơn hàng</th>
+                        <th>Tổng cộng</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in @Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.PhoneNumber</td>
+                            <td>@item.Address</td>
+                            <td>@item.OrderStatus</td>
+                            <td>@String.Format("{0:0,0}",item.Total) VNĐ</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@item.Id">Xem Thông Tin Khách Hàng</a><br>
+                                <a asp-action="ChiTietHoaDon" asp-route-hoadonid="@item.Id">Xem Thông Tin Sản Phẩm</a>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>

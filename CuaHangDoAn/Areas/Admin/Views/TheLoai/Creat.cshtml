@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Creat";
+}
+
+@model TheLoai
+
+<div class="container">
+    <div class="boxed">
+        <div class="boxed-child">
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Tên thể loại</label>
+                    <input asp-for="Name" type="text" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="from-group" style="margin-bottom: 15px">
+                    <label asp-for="DateCreated">Ngày tạo</label>
+                    <input asp-for="DateCreated" type="date" class="form-control" />
+                    <span asp-validation-for="DateCreated" class="text-danger"></span>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary" style="margin: 1rem; background-color: #3399ff;">Tạo mới</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

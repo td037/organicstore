@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SanPham>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col-2">Tên sản phẩm</th>
+                <th class="col-2">Mô tả</th>
+                <th class="col-2">Giá</th>
+                <th class="col-2">Hình ảnh</th>
+                <th class="col-2">Thể loại</th>
+                <th class="col-2">Chức năng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price</td>
+                    <td><img width="50%" src="@item.ImageUrl" /></td>
+                    <td>@item.TheLoai.Name</td>
+                    <td>
+                        <a asp-action="Upsert" asp-route-id="@item.Id">Edit</a> |
+                        <a href="#">Details</a> |
+                        <a class="text-danger" onclick="xoa(@item.Id, $(this))">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-controller="SanPham" asp-action="Upsert" class="btn btn-primary">Thêm mới</a>
+</div>
+<script>
+    function xoa(id, row) {
+        $.ajax({
+            url: `/Admin/SanPham/Delete/${id}`,
+            type: "POST",
+            success: function (data) {
+                row.closest("tr").remove();
+            }
+        })
+    }
+</script>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+
+@model TheLoai
+<div class="container">
+    <div class="boxed">
+        <div class="boxed-child">
+            <form method="post">
+                <div>
+                    <label asp-for="Id">ID: </label>
+                    <input asp-for="Id" type="number" class="form-control" disabled />
+                    <span asp-validation-for="Id" class="text-danger"></span><br />
+                </div>
+                <div>
+                    <label asp-for="Name">Tên thể loại: </label>
+                    <input asp-for="Name" type="text" class="form-control" disabled />
+                    <span asp-validation-for="Name" class="text-danger"></span><br />
+                </div>
+                <div>
+                    <label asp-for="DateCreated">Ngày tạo: </label>
+                    <input asp-for="DateCreated" type="date" class="form-control" disabled />
+                    <span asp-validation-for="DateCreated" class="text-danger"></span><br />
+                </div>
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+

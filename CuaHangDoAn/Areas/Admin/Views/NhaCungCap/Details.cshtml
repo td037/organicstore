@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+
+@model NhaCungCap
+<div class="container">
+    <div class="boxed">
+        <div class="boxed-child">
+            <div>
+                <form method="post">
+                    <div>
+                        <label asp-for="Id">ID: </label>
+                        <input asp-for="Id" type="number" class="form-control" disabled />
+                        <span asp-validation-for="Id" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Name">Tên nhà cung cấp: </label>
+                        <input asp-for="Name" type="text" class="form-control" disabled />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="SDT">SDT: </label>
+                        <input asp-for="SDT" type="number" class="form-control" disabled />
+                        <span asp-validation-for="SDT" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Address">Địa Chỉ: </label>
+                        <input asp-for="Address" type="text" class="form-control" disabled />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <a asp-action="Index" class="btn btn-secondary" style="margin-top: 15px">Quay lại</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+

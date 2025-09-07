@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+
+@model NhaCungCap
+
+<div class="container">
+    <div class="boxed">
+        <div class="boxed-child">
+
+            <form method="post" asp-action="Deleteconfirm">
+                <input asp-for="Id" type="hidden" />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" type="text" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+
+                    <label asp-for="Address">Address</label>
+                    <input asp-for="Address" type="text" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 15px">
+                    <label asp-for="SDT">SDT</label>
+                    <input asp-for="SDT" type="text" class="form-control" />
+                    <span asp-validation-for="SDT" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Xóa</button>
+                <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+

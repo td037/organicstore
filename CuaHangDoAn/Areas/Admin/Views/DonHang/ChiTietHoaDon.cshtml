@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ChiTietHoaDon>
+@{
+    int i = 1;
+}
+<div class="container">
+    <div class="boxed">
+        <div class="boxed-child">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Hình Ảnh</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Tổng Cộng</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in @Model)
+                    {
+                        <tr>
+                            <td width="5%">@(i++)</td>
+                            <td>@item.SanPham.Name</td>
+                            <td><img width="75px" src="@item.SanPham.ImageUrl" /></td>
+                            <td>@item.SanPham.Price</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.ProductPrice</td>
+                            <td>
+                                @* <a asp-action="ChiTietHoaDon" asp-route-id="@item.Id">Chi tiết đơn hàng</a> *@
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+            <a class="btn btn-primary" asp-action="index">Quay Lại</a>
+        </div>
+    </div>
+
+</div>

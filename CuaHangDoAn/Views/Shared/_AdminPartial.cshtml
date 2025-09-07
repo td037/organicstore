@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@if (SignInManager.IsSignedIn(User))
+{
+
+    <a class="pl-3 auth-link" asp-area="Admin" asp-controller="SanPham" asp-action="KiemTra" title="Manage">ADMIN</a>
+
+}
+else
+{
+    <!-- sigin and sign up -->
+    @* <a class="text-dark login_btn align-self-center mx-3" asp-area="Identity" asp-page="/Account/Register" href="#myModal_btn" data-toggle="modal" data-target="#myModal_btn">
+        <i class="far fa-user"></i>
+    </a> *@
+    <!-- sigin and sign up -->
+    @* <div class="signup-button">
+        <a asp-area="Identity" asp-page="/Account/Register" class="pl-3">Register</a>
+    </div> *@
+    <a asp-area="Identity" asp-page="/Account/Login" class="nav-link text-dark">Bạn Cần Đăng Nhập!</a>
+    @* <div class="signup-button">
+        <a asp-area="Identity" asp-page="/Account/Login" class="pl-3">Login</a>
+    </div> *@
+
+
+}
+

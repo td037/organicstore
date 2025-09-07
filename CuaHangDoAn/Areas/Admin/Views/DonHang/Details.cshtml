@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+
+@model HoaDon
+
+
+<div class="container">
+
+    <div class="boxed">
+        <div class="boxed-child">
+            <form method="post" asp-action="Details">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <label asp-for="Id">Id</label>
+                    <input asp-for="Id" type="number" class="form-control" disabled />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Name">Tên</label>
+                    <input asp-for="Name" type="text" class="form-control" disabled />
+                    <span asp-validation-for="Name" class=""></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Address">Địa Chỉ</label>
+                    <input asp-for="Address" type="text" class="form-control" disabled />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber">Sđt</label>
+                    <input asp-for="PhoneNumber" type="number" class="form-control" disabled />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OrderDate">Ngày Đặt</label>
+                    <input asp-for="OrderDate" type="text" class="form-control" disabled />
+                    <span asp-validation-for="OrderDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OrderStatus">Trạng Thái</label>
+                    <input asp-for="OrderStatus" type="text" class="form-control" disabled />
+                    <span asp-validation-for="OrderStatus" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Total">Số Tiền</label>
+                    <input asp-for="Total" type="text" class="form-control" disabled />
+                    <span asp-validation-for="Total" class="text-danger"></span>
+                </div>
+                @*                 <div class="container">
+                <div class="boxed">
+                <div class="boxed-child">
+                <table class="table">
+                <thead>
+                <tr>
+                <th>Tên sản phẩm</th>
+                <th>Mô tả</th>
+                <th>Giá</th>
+                <th>Hình ảnh</th>
+                <th>Thể Loại</th>
+                <th>Chức năng</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model.DsSanPham)
+                {
+                <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td><img width="50px" src="@item.ImageUrl" /></td>
+                <td>@item.TheLoai.Name</td>
+                </tr>
+                }
+
+                </tbody>
+                </table>
+                </div>
+                </div>
+
+                </div> *@
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+

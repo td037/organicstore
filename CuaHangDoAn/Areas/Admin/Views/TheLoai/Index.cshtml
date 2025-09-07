@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="boxed">
+        <div class="boxed-child">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tên thể loại</th>
+                        <th>Ngày tạo</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                @foreach (var item in ViewBag.TheLoai)
+                {
+                    <tbody>
+                        <tr>
+                            <td width="30%">@item.Name</td>
+                            <td width="30%">@String.Format("{0:dd/MM/yyyy}",item.DateCreated)</td>
+                            <td width="40%" class="action-cell">
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+            <a asp-controller="TheLoai" asp-action="Creat" class="btn btn-primary" style="margin: 1rem; background-color: #3399ff;">Thêm mới</a>
+        </div>
+    </div>
+    
+</div>
+
