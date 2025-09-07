@@ -1,34 +1,44 @@
-# 🍔 Hệ Thống Quản Lý Cửa Hàng Thực Phẩm ORGANIC
+# 🌱 Organic Store
+
+Ứng dụng web bán hàng trực tuyến chuyên về thực phẩm hữu cơ, giúp người dùng dễ dàng tìm kiếm, lựa chọn và đặt mua sản phẩm.
 
 ---
 
-## 📌 Giới thiệu  
-**Cửa Hàng Thực Phẩm ORGANIC** là ứng dụng web được xây dựng bằng **ASP.NET Core MVC** và **Entity Framework**, cho phép người dùng đặt món ăn trực tuyến.  
-Hệ thống cũng cung cấp trang quản trị (Admin Dashboard) để quản lý sản phẩm, khách hàng và doanh thu.  
+## 🚀 Chức năng chính
+
+- 👤 Đăng ký / Đăng nhập tài khoản  
+- 🛒 Xem sản phẩm, tìm kiếm & lọc theo danh mục  
+- 📦 Quản lý giỏ hàng & đặt hàng trực tuyến  
+- 🔑 Quản lý người dùng (Admin)  
+- 📊 Quản lý sản phẩm, đơn hàng và doanh thu (Admin)  
 
 ---
 
-## 🚀 Tính năng  
+## 🛠️ Công nghệ sử dụng
 
-### 👨‍💻 Người dùng  
-- Đăng ký/Đăng nhập (có xác thực).  
-- Xem và tìm kiếm món ăn.  
-- Thêm món vào giỏ hàng và đặt hàng.  
-- Nhận email xác nhận đơn hàng, theo dõi trạng thái đơn.  
-
-### 🔧 Quản trị viên (Admin)  
-- Quản lý sản phẩm (Thêm, Sửa, Xóa).  
-- Quản lý đơn hàng và khách hàng.  
-- Thống kê doanh thu và số liệu bán hàng.  
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap  
+- **Backend**: WordPress (PHP, MySQL)  
+- **Cơ sở dữ liệu**: MySQL  
+- **Quản lý mã nguồn**: GitHub  
 
 ---
 
-## 🛠️ Công nghệ sử dụng  
-- **Backend:** C#, ASP.NET Core MVC, Entity Framework Core  
-- **Frontend:** HTML5, CSS3, Bootstrap, jQuery, AJAX  
-- **Database:** SQL Server  
-- **Công cụ:** Visual Studio, GitHub  
+## 📸 Demo
+
+🔗 [Xem website tại đây](https://github.com/td037/organicstore)  
 
 ---
 
+## 👨‍💻 Vai trò cá nhân
 
+- Thiết kế và triển khai giao diện người dùng.  
+- Tích hợp và tùy chỉnh plugin WordPress để hỗ trợ giỏ hàng và thanh toán.  
+- Quản lý và tối ưu cơ sở dữ liệu sản phẩm.  
+
+---
+
+## 📌 Hướng dẫn cài đặt
+
+1. Clone project:
+   ```bash
+   git clone https://github.com/td037/organicstore.git
